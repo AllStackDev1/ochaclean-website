@@ -1,15 +1,13 @@
 import { FC, Fragment } from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { Box, Container, Flex, Button, Link } from '@chakra-ui/react'
+import { Box, Container, Flex, Button, Link, Text } from '@chakra-ui/react'
 
 const links = [
-  { name: 'Home', path: '/' },
-  { name: 'How it works ', path: '/how-it-works ' },
-  { name: 'About', path: '/about' }
-  // { name: 'Provider', path: '/provider' },
-  // { name: 'Professionals', path: '/professionals' },
-  // { name: 'Services', path: '/services' }
+  { name: 'About us', path: '/about-us' },
+  { name: 'FAQ', path: '/faq ' },
+  { name: 'Support', path: '/support' },
+  { name: 'Signup/Login', path: '/auth', weight: 'bold' }
 ]
 
 const Nav: FC = () => {
@@ -32,83 +30,74 @@ const Nav: FC = () => {
       >
         <NextLink href="/" passHref>
           <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
-            <Box
-              bgImage="url('./images/logo.png')"
-              bgRepeat="no-repeat"
-              bgSize="contain"
-              w={40}
-              h={8}
-            />
+            <Text
+              fontWeight="black"
+              fontSize={24}
+              letterSpacing={2}
+              color="white"
+              textTransform={'uppercase'}
+            >
+              Ocha
+            </Text>
           </Link>
         </NextLink>
 
-        <Flex align="center">
-          {links.map((item, idx) => (
-            <Fragment key={item.name}>
-              <NextLink href={item.path} passHref>
-                <Link
-                  fontWeight={400}
-                  fontSize={{ base: 'sm', xl: 'md' }}
-                  _hover={{ hover: 'none' }}
-                  _focus={{ outline: 'none' }}
-                  rel="noreferrer"
-                  {...(router.pathname === item.path
-                    ? {
-                        color: 'brand.purple.200',
-                        fontWeight: 700
-                      }
-                    : '')}
-                >
-                  {item.name}
-                </Link>
-              </NextLink>
-              {links.length !== idx + 1 && <Box mx={4} />}
-            </Fragment>
-          ))}
-        </Flex>
-
-        <Flex align="center">
-          <Link
-            href="/sign-in"
-            _hover={{ hover: 'none' }}
-            _focus={{ outline: 'none' }}
-            rel="noreferrer"
-          >
-            <Button
-              py={2}
-              px={6}
-              rounded="lg"
-              variant="solid"
-              fontWeight={600}
+        <Box>
+          <Flex align="center">
+            {links.map((item, idx) => (
+              <Fragment key={item.name}>
+                <NextLink href={item.path} passHref>
+                  <Link
+                    fontWeight={item.weight || 400}
+                    fontSize={{ base: 'sm', xl: 'md' }}
+                    _hover={{ hover: 'none' }}
+                    _focus={{ outline: 'none' }}
+                    rel="noreferrer"
+                    color="white"
+                    {...(router.pathname === item.path
+                      ? {
+                          color: 'brand.purple.200',
+                          fontWeight: 700
+                        }
+                      : '')}
+                  >
+                    {item.name}
+                  </Link>
+                </NextLink>
+                {links.length !== idx + 1 && <Box mx={4} />}
+              </Fragment>
+            ))}
+            <Link
+              href="/sign-up"
+              _hover={{ hover: 'none' }}
               _focus={{ outline: 'none' }}
-              colorScheme="brandPurple"
-              fontSize={{ base: 'sm', xl: 'sm' }}
+              rel="noreferrer"
             >
-              Sign In
-            </Button>
-          </Link>
-          <Box mx={4} />
-          <Link
-            href="/sign-up"
-            _hover={{ hover: 'none' }}
-            _focus={{ outline: 'none' }}
-            rel="noreferrer"
-          >
-            <Button
-              py={2}
-              px={6}
-              rounded="lg"
-              variant="outline"
-              fontWeight={600}
-              borderWidth={2}
-              _focus={{ outline: 'none' }}
-              colorScheme="brandPurple"
-              fontSize={{ base: 'sm', xl: 'sm' }}
-            >
-              Sign Up
-            </Button>
-          </Link>
-        </Flex>
+              <Button
+                ml={4}
+                bg="#000"
+                py={6}
+                px={6}
+                color="white"
+                rounded="sm"
+                variant="solid"
+                fontWeight={600}
+                borderWidth={1}
+                borderColor={'#000'}
+                _focus={{ outline: 'none', bg: '#000009' }}
+                _hover={{
+                  borderWidth: 1,
+                  borderColor: '#000',
+                  bg: 'transparent',
+                  color: 'black'
+                }}
+                fontSize={{ base: 'sm', xl: 'sm' }}
+              >
+                Register as a cleaner
+              </Button>
+            </Link>
+          </Flex>
+        </Box>
       </Container>
     </Flex>
   )

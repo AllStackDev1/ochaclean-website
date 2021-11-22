@@ -16,7 +16,7 @@ export const theme = extendTheme({
   styles: {
     global: () => ({
       'html, body': {
-        fontFamily: '"MartelSans", sans-serif',
+        fontFamily: '"UberMove", sans-serif',
         fontWeight: 400
       },
       body: {
@@ -30,8 +30,8 @@ export const theme = extendTheme({
   },
   breakpoints,
   fonts: {
-    heading: '"HeldaneText", sans-serif',
-    body: '"MartelSans", sans-serif'
+    heading: '"UberMove", sans-serif',
+    body: '"UberMove", sans-serif'
   },
   fontSizes: {
     xx: '.55rem',

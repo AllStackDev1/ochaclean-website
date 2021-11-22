@@ -55,3 +55,36 @@
   font-display: swap;
   src: url("../fonts/HeldaneText/test-heldane-text-medium.woff2") format("opentype");
 }
+
+
+@font-face {
+  font-family: "UberMove";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/UberMove/UberMoveTextLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "UberMove";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/UberMove/UberMoveTextMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "UberMove";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/UberMove/UberMoveTextRegular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "UberMove";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/UberMove/UberMoveTextBold.otf") format("opentype");
+}

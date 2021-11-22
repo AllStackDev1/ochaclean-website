@@ -8,16 +8,29 @@ const Hero: FC = () => {
       pl={{ '2xl': 24 }}
       pb={{ '2xl': 24 }}
       justifyContent="space-between"
+      bgImage="./images/Hero.png"
+      bgSize="contain"
     >
-      <Flex mt={28} flexDir="column" justify="end">
+      <Flex mt={28} flexDir="column" justifyContent="">
         <Box w={{ '2xl': 122 }}>
           <Heading
-            fontWeight={400}
-            fontSize={{ '2xl': '70px' }}
-            lineHeight={{ '2xl': '120%' }}
+            fontSize={{ '2xl': 56 }}
+            lineHeight={{ '2xl': '1.5em' }}
             mb={{ '2xl': 6 }}
+            mt={12}
+            fontWeight={500}
+            color="white"
           >
-            Fill your healthcare vacancies at a click of a button
+            24 Hours
+          </Heading>
+          <Heading
+            fontSize={{ '2xl': 56 }}
+            lineHeight={{ '2xl': '1.5em' }}
+            mb={{ '2xl': 6 }}
+            fontWeight={500}
+            color="white"
+          >
+            Cleaning Platform
           </Heading>
 
           <Text fontSize={{ '2xl': 'xl' }} lineHeight={{ '2xl': '160%' }}>
@@ -32,7 +45,7 @@ const Hero: FC = () => {
             px={10}
             rounded="xl"
             variant="solid"
-            fontWeight={600}
+            fontWeight={500}
             _focus={{ outline: 'none' }}
             colorScheme="brandPurple"
             fontSize={{ base: 'sm', '2xl': 'xl' }}
@@ -41,22 +54,7 @@ const Hero: FC = () => {
           </Button>
         </Box>
       </Flex>
-      <Box pos="relative" w={{ '2xl': 120 }} h={{ '2xl': 125 }}>
-        <Box pos="absolute" right={0}>
-          <Image src="./images/hero-decor-1.svg" alt="mother and daughter" />
-        </Box>
-        <Box
-          bottom={{ '2xl': 12 }}
-          pos="absolute"
-          w={{ '2xl': 116 }}
-          right={{ '2xl': 20 }}
-        >
-          <Image
-            src="./images/overlay-home-hero.png"
-            alt="mother and daughter"
-          />
-        </Box>
-      </Box>
+      <Box pos="relative" w={{ '2xl': 120 }} h={{ '2xl': 125 }}></Box>
     </Flex>
   )
 }

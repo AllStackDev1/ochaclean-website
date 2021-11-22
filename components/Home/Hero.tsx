@@ -9,7 +9,7 @@ const Hero: FC = () => {
       pb={{ '2xl': 24 }}
       justifyContent="space-between"
       bgImage="./images/Hero.png"
-      bgSize="contain"
+      bgSize="cover"
     >
       <Flex mt={28} flexDir="column" justifyContent="">
         <Box w={{ '2xl': 122 }}>
@@ -20,6 +20,8 @@ const Hero: FC = () => {
             mt={12}
             fontWeight={500}
             color="white"
+            borderBottom={'2px solid white'}
+            display="inline-block"
           >
             24 Hours
           </Heading>
@@ -29,30 +31,26 @@ const Hero: FC = () => {
             mb={{ '2xl': 6 }}
             fontWeight={500}
             color="white"
+            borderBottom={'2px solid white'}
+            display="inline-block"
           >
             Cleaning Platform
           </Heading>
 
-          <Text fontSize={{ '2xl': 'xl' }} lineHeight={{ '2xl': '160%' }}>
-            UK's first live database of Carers and Nurses. Recruit your
-            permanent and temporary staff from our easy to use platform.
+          <Text
+            mt={12}
+            fontSize={{ '2xl': 'lg' }}
+            lineHeight={{ '2xl': '160%' }}
+            color="white"
+            fontWeight={500}
+          >
+            Free up your closers by tapping into a pool of qualified appointment
+            setters ready to take over the tedious tasks of qualifying, warming,
+            and appointment setting.
           </Text>
         </Box>
 
-        <Box mt={{ '2xl': 10 }}>
-          <Button
-            py={8}
-            px={10}
-            rounded="xl"
-            variant="solid"
-            fontWeight={500}
-            _focus={{ outline: 'none' }}
-            colorScheme="brandPurple"
-            fontSize={{ base: 'sm', '2xl': 'xl' }}
-          >
-            Join our waiting list
-          </Button>
-        </Box>
+        <Box mt={{ '2xl': 10 }}></Box>
       </Flex>
       <Box pos="relative" w={{ '2xl': 120 }} h={{ '2xl': 125 }}></Box>
     </Flex>

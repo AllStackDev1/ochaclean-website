@@ -7,7 +7,8 @@ import {
   Image,
   Heading,
   GridItem,
-  Container
+  Container,
+  Divider
 } from '@chakra-ui/react'
 
 const CTA: FC = () => {
@@ -24,6 +25,12 @@ const CTA: FC = () => {
                 The first list that you see on the next screen is your last
               </Text>
             </Box>
+            <Divider
+              borderWidth={1}
+              borderColor="gray.300"
+              orientation="vertical"
+              h={{ xl: 20 }}
+            />
             <Box>
               <Link href="#">
                 <Image h={12} src="/images/playstore.png" />

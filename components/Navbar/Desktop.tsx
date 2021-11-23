@@ -56,7 +56,6 @@ const Nav: FC = () => {
                     color="white"
                     {...(router.pathname === item.path
                       ? {
-                          color: 'brand.purple.200',
                           fontWeight: 700
                         }
                       : '')}

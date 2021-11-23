@@ -18,7 +18,9 @@ const Hero: FC = () => {
           fontSize={{ '2xl': '62px' }}
           lineHeight={{ '2xl': '1.5em' }}
           fontWeight={400}
-          borderBottom="2px solid white"
+          textDecoration="underline"
+          textUnderlineOffset="10px"
+          textDecorationThickness="3px"
         >
           About Us and Our Mission
         </Heading>

@@ -26,25 +26,28 @@ const Hero: FC = () => {
       <Flex mt={28} flexDir="column" justifyContent="">
         <Box w={{ '2xl': 122 }}>
           <Heading
-            fontSize={{ '2xl': 52 }}
-            lineHeight={{ '2xl': '1.5em' }}
-            mb={{ '2xl': 6 }}
             mt={12}
-            fontWeight={500}
             color="white"
-            borderBottom={'2px solid white'}
+            fontWeight={500}
+            mb={{ '2xl': 6 }}
             display="inline-block"
+            fontSize={{ xl: '68px' }}
+            textDecoration="underline"
+            textUnderlineOffset="10px"
+            lineHeight={{ xl: '88px' }}
           >
             24 Hours
           </Heading>
           <Heading
-            fontSize={{ '2xl': 52 }}
-            lineHeight={{ '2xl': '1.5em' }}
+            color="white"
             mb={{ '2xl': 6 }}
             fontWeight={500}
-            color="white"
-            borderBottom={'2px solid white'}
             display="inline-block"
+            fontSize={{ xl: '68px' }}
+            textDecoration="underline"
+            textUnderlineOffset="10px"
+            textDecorationThickness="3px"
+            lineHeight={{ xl: '88px' }}
           >
             Cleaning Platform
           </Heading>

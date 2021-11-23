@@ -5,13 +5,13 @@ import {
   Flex,
   Grid,
   Text,
-  Heading,
   GridItem,
-  Container
+  Image,
+  Link
 } from '@chakra-ui/react'
 import { Arrow } from 'theme/Icons'
 import ReviewBox from './ReviewBox'
-
+import { GReview } from 'theme/Icons'
 const Reviews: FC = () => {
   return (
     <Box mt={24}>
@@ -60,6 +60,20 @@ const Reviews: FC = () => {
             <ReviewBox {...{ mr: 4 }} />
             <ReviewBox {...{ mr: 4 }} />
             <ReviewBox {...{ mr: 4 }} />
+          </Flex>
+        </Box>
+      </Flex>
+      <Flex justify="center">
+        <Box>
+          <Flex mb={4}>
+            <Text>Rated 4.2 out of 5 based on 309 </Text>
+            <Image src={'./images/G-review.png'} h={6} mt={0} ml={2} />
+          </Flex>
+          <Flex justify="center">
+            <Link color="rgba(39, 110, 241, 1)" fontWeight={600}>
+              See our 149 reviews on{' '}
+            </Link>
+            <Image src={'./images/Trustpilot_logo.png'} h={10} mt={-2} ml={2} />
           </Flex>
         </Box>
       </Flex>

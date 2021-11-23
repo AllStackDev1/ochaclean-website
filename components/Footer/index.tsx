@@ -7,150 +7,164 @@ import {
   Text,
   Flex,
   Grid,
+  Heading,
   Divider,
   GridItem,
   Container
 } from '@chakra-ui/react'
-import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
-import Menu from './Menu'
 
 const Footer: FC = () => {
-  const menus = [
+  const useFulLink = [
     {
-      title: 'Services',
-      links: [
-        {
-          title: 'Overnight care',
-          link: '/#'
-        },
-        {
-          title: 'Flexi care/Hourly care',
-          link: '/#'
-        },
-        {
-          title: 'Video companionship',
-          link: '/#'
-        },
-        {
-          title: '24-hour live in care',
-          link: '/#'
-        },
-        {
-          title: 'Permanent staff',
-          link: '/#'
-        }
-      ]
+      title: 'About',
+      link: '/#'
     },
     {
-      title: 'Resources',
-      links: [
-        {
-          title: 'Guides',
-          link: '/#'
-        },
-        {
-          title: 'Carer training',
-          link: '/#'
-        },
-        {
-          title: 'Help & support',
-          link: '/#'
-        }
-      ]
+      title: 'Blog',
+      link: '/#'
     },
     {
-      title: 'Company',
-      links: [
-        {
-          title: 'About',
-          link: '/#'
-        },
-        {
-          title: 'Contact',
-          link: '/#'
-        }
-      ]
+      title: 'Privacy',
+      link: '/#'
+    },
+    {
+      title: 'Terms',
+      link: '/#'
+    }
+  ]
+
+  const socials = [
+    {
+      link: '#',
+      icon: AiFillInstagram
+    },
+    {
+      link: '#',
+      icon: FaFacebookF
+    },
+    {
+      link: '#',
+      icon: FaTwitter
     }
   ]
   return (
-    <Box w="full" pb={{ xl: 5 }} pt={{ xl: 20 }} bgColor="brand.purple.700">
+    <Box w="full" pb={{ xl: 5 }} pt={{ xl: 20 }} bgColor="white">
       <Container
-        color="white"
+        color="gray.900"
         textAlign="center"
         minW={{ lg: '7xl', '4xl': '8xl' }}
       >
         <Grid templateColumns={{ lg: '40% 20% 20% 20%' }} columnGap={6} mb={12}>
           <GridItem textAlign={{ base: 'center', lg: 'left' }}>
-            <NextLink href="/#" passHref>
+            <NextLink href="/" passHref>
               <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
-                <Box
-                  bgImage="url('./images/logo-2.png')"
-                  bgRepeat="no-repeat"
-                  bgSize="contain"
-                  w={40}
-                  h={8}
-                />
+                <Text
+                  fontWeight="black"
+                  fontSize={24}
+                  letterSpacing={2}
+                  textTransform={'uppercase'}
+                >
+                  Ocha
+                </Text>
               </Link>
             </NextLink>
-            <Flex
-              mt={4}
-              mb={4}
-              align={{ base: 'center', lg: 'flex-end' }}
-              color="rgba(255, 255, 255, 0.8)"
-            >
-              <Box w={10} h={10}>
-                <Icon as={FaFacebookF} boxSize={5} />
-              </Box>
-              <Box w={10} h={10}>
-                <Icon as={FaTwitter} boxSize={5} />
-              </Box>
-              <Box w={10} h={10}>
-                <Icon as={AiFillInstagram} boxSize={5} />
-              </Box>
-              <Box w={10} h={10}>
-                <Icon as={FaYoutube} boxSize={5} />
-              </Box>
+            <Box w={{ lg: 80 }}>
+              <Text>
+                Ocha clean is a company dedicated to eliminating unnecessary
+                delays in everyday life.
+              </Text>
+            </Box>
+          </GridItem>
+
+          <GridItem textAlign="left">
+            <Heading fontSize="md" fontFamily="UberMove" fontWeight={600}>
+              Useful Links
+            </Heading>
+            <Flex mt={2} direction="column">
+              {useFulLink.map((e, i) => (
+                <NextLink key={i} href={e.link} passHref>
+                  <Link
+                    py={2}
+                    fontSize="md"
+                    lineHeight="24px"
+                    _focus={{ outline: 'none' }}
+                    _hover={{ outline: 'none' }}
+                  >
+                    {e.title}
+                  </Link>
+                </NextLink>
+              ))}
             </Flex>
           </GridItem>
 
-          {menus.map((e, i) => (
-            <Menu key={i} title={e.title} links={e.links} />
-          ))}
-        </Grid>
-        <Divider borderColor="white" />
-        <Flex
-          mt={4}
-          align="center"
-          color="rgba(255, 255, 255, 0.7)"
-          justifyContent="space-between"
-          direction={{ base: 'column-reverse', lg: 'row' }}
-        >
-          <Flex align="center">
-            <Text fontSize="md">© 2021 Herocare</Text>
-          </Flex>
-          <Flex w={80} justify="space-around">
-            <NextLink href="/#" passHref>
+          <GridItem textAlign="left">
+            <Heading fontSize="md" fontFamily="UberMove" fontWeight={600}>
+              Contact
+            </Heading>
+            <Flex mt={2} direction="column">
+              <Text>Get in touch:</Text>
               <Link
+                py={2}
                 fontSize="md"
+                lineHeight="24px"
+                href="mailto:hello@ochaclean.com"
                 _focus={{ outline: 'none' }}
                 _hover={{ outline: 'none' }}
               >
-                Privacy policy
+                hello@ochaclean.com
               </Link>
-            </NextLink>
+              <Link
+                py={2}
+                fontSize="md"
+                lineHeight="24px"
+                href="tel:+2348146720092"
+                _focus={{ outline: 'none' }}
+                _hover={{ outline: 'none' }}
+              >
+                0814 672 0092
+              </Link>
+            </Flex>
+          </GridItem>
 
-            <NextLink href="/#" passHref>
-              <Link
-                fontSize="md"
-                _focus={{ outline: 'none' }}
-                _hover={{ outline: 'none' }}
-              >
-                Terms of use
-              </Link>
-            </NextLink>
-          </Flex>
-        </Flex>
+          <GridItem textAlign="left">
+            <Heading fontSize="md" fontFamily="UberMove" fontWeight={600}>
+              Connect
+            </Heading>
+            <Flex
+              mt={4}
+              mb={4}
+              w={{ lg: 36 }}
+              justify="space-between"
+              align={{ base: 'center', lg: 'flex-end' }}
+            >
+              {socials.map(e => (
+                <Link
+                  href={e.link}
+                  _focus={{ outline: 'none' }}
+                  _hover={{ outline: 'none' }}
+                >
+                  <Flex
+                    rounded="full"
+                    borderWidth={1}
+                    borderColor="gray.300"
+                    justify="center"
+                    align="center"
+                    w={10}
+                    h={10}
+                  >
+                    <Icon as={e.icon} boxSize={5} />
+                  </Flex>
+                </Link>
+              ))}
+            </Flex>
+          </GridItem>
+        </Grid>
+        <Divider borderColor="gray.300" />
+        <Box py={8} textAlign="left">
+          <Text fontSize="md">© 2021 Ocha. All rights reserved</Text>
+        </Box>
       </Container>
     </Box>
   )

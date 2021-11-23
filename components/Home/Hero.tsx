@@ -1,8 +1,4 @@
 import { FC } from 'react'
-<<<<<<< HEAD
-import { Box, Flex, Text, Heading } from '@chakra-ui/react'
-
-=======
 import {
   Box,
   Icon,
@@ -16,7 +12,7 @@ import {
   InputLeftElement
 } from '@chakra-ui/react'
 import { FiSearch } from 'react-icons/fi'
->>>>>>> 896da44f471383f0eb74f37804a0915e7812aafa
+
 const Hero: FC = () => {
   return (
     <Flex

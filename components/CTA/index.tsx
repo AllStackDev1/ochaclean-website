@@ -1,43 +1,48 @@
 import { FC } from 'react'
-import { Box, Text, Button, Heading, Container } from '@chakra-ui/react'
-import Art from './Art'
+import {
+  Box,
+  Text,
+  Link,
+  Grid,
+  Image,
+  Heading,
+  GridItem,
+  Container
+} from '@chakra-ui/react'
 
 const CTA: FC = () => {
   return (
-    <Box w="full" py={{ xl: 24 }} pos="relative" bgColor="brand.purple.200">
-      <Art pos="left" />
-      <Art pos="right" />
-      <Container
-        w="full"
-        color="white"
-        textAlign="center"
-        minW={{ lg: '7xl', '4xl': '8xl' }}
-      >
-        <Box>
-          <Heading
-            fontWeight={400}
-            fontSize={{ xl: '72px' }}
-            lineHeight={{ xl: '120%' }}
-            mb={{ xl: 4 }}
-          >
-            A final header with a strong cta
-          </Heading>
-          <Text>It breaks up the intimidating blocks of text.</Text>
-        </Box>
-        <Box mt={{ xl: 10 }}>
-          <Button
-            py={8}
-            px={10}
-            rounded="xl"
-            variant="solid"
-            fontWeight={600}
-            _focus={{ outline: 'none' }}
-            colorScheme="brandOrange"
-            fontSize={{ base: 'sm', xl: 'xl' }}
-          >
-            Join our waiting list
-          </Button>
-        </Box>
+    <Box w="full" pt={{ xl: 24 }} pos="relative" bgColor="#F4F5FA">
+      <Container w="full" minW={{ lg: '7xl', '4xl': '8xl' }}>
+        <Grid templateColumns={{ xl: '50% 50%' }}>
+          <GridItem d="flex" alignItems="center" justifyContent="space-between">
+            <Box w={{ xl: 80 }}>
+              <Heading fontWeight={700} fontSize={{ xl: '45px' }}>
+                Download our mobile app
+              </Heading>
+              <Text mt={{ xl: 2 }}>
+                The first list that you see on the next screen is your last
+              </Text>
+            </Box>
+            <Box>
+              <Link href="#">
+                <Image h={12} src="/images/playstore.png" />
+              </Link>
+              <Box my={2} />
+              <Link href="#">
+                <Image h={12} src="/images/appstore.png" />
+              </Link>
+            </Box>
+          </GridItem>
+          <GridItem d="flex" pos="relative" justifyContent="flex-end">
+            <Box pos="absolute" bottom={0} left={20}>
+              <Image src="/images/phone-2.png" />
+            </Box>
+            <Box>
+              <Image src="/images/phone-1.png" />
+            </Box>
+          </GridItem>
+        </Grid>
       </Container>
     </Box>
   )

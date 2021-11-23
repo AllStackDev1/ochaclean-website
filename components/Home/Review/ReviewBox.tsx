@@ -42,6 +42,7 @@ const ReviewBox: FC<IReviewBox> = ({ ...rest }) => {
       <Flex mt={4}>
         {['x', 'x', 'x', 'x', 'b'].map((item, i) => (
           <Icon
+            key={i}
             as={IoStar}
             mr={1}
             boxSize={5}

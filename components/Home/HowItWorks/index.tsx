@@ -1,20 +1,8 @@
-import PropTypes from 'prop-types'
 import { FC } from 'react'
-import {
-  Box,
-  Icon,
-  Flex,
-  Text,
-  Image,
-  Link,
-  Button,
-  Heading,
-  InputGroup,
-  InputLeftElement,
-  Container
-} from '@chakra-ui/react'
+import { Box, Icon, Flex, Text, Link, Container } from '@chakra-ui/react'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
-const Hiw = () => {
+
+const HowItWorks: FC = () => {
   return (
     <Box borderBottomWidth={1} borderColor={'gray.100'}>
       <Container minW={{ lg: '6xl', '4xl': '8xl' }} mt={4}>
@@ -132,6 +120,4 @@ const Hiw = () => {
   )
 }
 
-Hiw.propTypes = {}
-
-export default Hiw
+export default HowItWorks

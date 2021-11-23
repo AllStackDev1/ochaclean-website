@@ -26,7 +26,7 @@ const Nav: FC = () => {
       <Container
         d="flex"
         justifyContent="space-between"
-        minW={{ lg: '7xl', '4xl': '8xl' }}
+        minW={{ lg: '6xl', '4xl': '8xl' }}
       >
         <NextLink href="/" passHref>
           <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
@@ -48,7 +48,7 @@ const Nav: FC = () => {
               <Fragment key={item.name}>
                 <NextLink href={item.path} passHref>
                   <Link
-                    fontWeight={item.weight || 400}
+                    fontWeight={item.weight || 300}
                     fontSize={{ base: 'sm', xl: 'md' }}
                     _hover={{ hover: 'none' }}
                     _focus={{ outline: 'none' }}
@@ -81,7 +81,7 @@ const Nav: FC = () => {
                 color="white"
                 rounded="sm"
                 variant="solid"
-                fontWeight={600}
+                fontWeight={300}
                 borderWidth={1}
                 borderColor={'#000'}
                 _focus={{ outline: 'none', bg: '#000009' }}

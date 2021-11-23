@@ -12,6 +12,7 @@ import {
   InputLeftElement
 } from '@chakra-ui/react'
 import { FiSearch } from 'react-icons/fi'
+
 const Hero: FC = () => {
   return (
     <Flex

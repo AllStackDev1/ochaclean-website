@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { Arrow } from 'theme/Icons'
 import ReviewBox from './ReviewBox'
-import { GReview } from 'theme/Icons'
+
 const Reviews: FC = () => {
   return (
     <Box mt={24}>
@@ -64,7 +64,7 @@ const Reviews: FC = () => {
         </Box>
       </Flex>
       <Flex justify="center">
-        <Box>
+        <Box mb={12}>
           <Flex mb={4}>
             <Text>Rated 4.2 out of 5 based on 309 </Text>
             <Image src={'./images/G-review.png'} h={6} mt={0} ml={2} />

@@ -1,16 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC } from 'react'
-import {
-  Box,
-  Icon,
-  Flex,
-  Image,
-  Text,
-  Heading,
-  GridItem,
-  Container
-} from '@chakra-ui/react'
+import { Box, Icon, Flex, Image, Text, Heading } from '@chakra-ui/react'
 import { IoStar } from 'react-icons/io5'
-import avatar from 'public/images/avatar.png'
 
 interface IReviewBox {
   [rest: string]: any
@@ -40,8 +32,9 @@ const ReviewBox: FC<IReviewBox> = ({ ...rest }) => {
         which are a simple standard cleaning!
       </Text>
       <Flex mt={4}>
-        {['x', 'x', 'x', 'x', 'b'].map((item, i) => (
+        {['a', 'b', 'c', 'd', 'e'].map((item, i) => (
           <Icon
+            key={item}
             as={IoStar}
             mr={1}
             boxSize={5}

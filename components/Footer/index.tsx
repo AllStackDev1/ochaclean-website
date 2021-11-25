@@ -50,14 +50,15 @@ const Footer: FC = () => {
     }
   ]
   return (
-    <Box w="full" pb={{ xl: 5 }} pt={{ xl: 20 }} bgColor="white">
+    <Box w="full" pb={{ xl: 5 }} pt={{ base: 5, xl: 20 }} bgColor="white">
       <Container
         color="gray.900"
         textAlign="center"
+        fontSize={{ base: 'sm', xl: 'md' }}
         minW={{ lg: '7xl', '4xl': '8xl' }}
       >
-        <Grid templateColumns={{ lg: '40% 20% 20% 20%' }} columnGap={6} mb={12}>
-          <GridItem textAlign={{ base: 'center', lg: 'left' }}>
+        <Grid templateColumns={{ lg: '40% 20% 20% 20%' }} gap={6} mb={12}>
+          <GridItem textAlign="left">
             <NextLink href="/" passHref>
               <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
                 <Text
@@ -79,7 +80,11 @@ const Footer: FC = () => {
           </GridItem>
 
           <GridItem textAlign="left">
-            <Heading fontSize="md" fontFamily="UberMove" fontWeight={600}>
+            <Heading
+              fontSize={{ base: 'sm', xl: 'md' }}
+              fontFamily="UberMove"
+              fontWeight={600}
+            >
               Useful Links
             </Heading>
             <Flex mt={2} direction="column">
@@ -87,7 +92,6 @@ const Footer: FC = () => {
                 <NextLink key={i} href={e.link} passHref>
                   <Link
                     py={2}
-                    fontSize="md"
                     lineHeight="24px"
                     _focus={{ outline: 'none' }}
                     _hover={{ outline: 'none' }}
@@ -100,14 +104,17 @@ const Footer: FC = () => {
           </GridItem>
 
           <GridItem textAlign="left">
-            <Heading fontSize="md" fontFamily="UberMove" fontWeight={600}>
+            <Heading
+              fontSize={{ base: 'sm', xl: 'md' }}
+              fontFamily="UberMove"
+              fontWeight={600}
+            >
               Contact
             </Heading>
             <Flex mt={2} direction="column">
               <Text>Get in touch:</Text>
               <Link
                 py={2}
-                fontSize="md"
                 lineHeight="24px"
                 href="mailto:hello@ochaclean.com"
                 _focus={{ outline: 'none' }}
@@ -117,7 +124,6 @@ const Footer: FC = () => {
               </Link>
               <Link
                 py={2}
-                fontSize="md"
                 lineHeight="24px"
                 href="tel:+2348146720092"
                 _focus={{ outline: 'none' }}
@@ -129,14 +135,18 @@ const Footer: FC = () => {
           </GridItem>
 
           <GridItem textAlign="left">
-            <Heading fontSize="md" fontFamily="UberMove" fontWeight={600}>
+            <Heading
+              fontSize={{ base: 'sm', xl: 'md' }}
+              fontFamily="UberMove"
+              fontWeight={600}
+            >
               Connect
             </Heading>
             <Flex
               mt={4}
               mb={4}
-              w={{ lg: 36 }}
-              justify="space-between"
+              w={36}
+              justify={'space-between'}
               align={{ base: 'center', lg: 'flex-end' }}
             >
               {socials.map(e => (
@@ -162,8 +172,8 @@ const Footer: FC = () => {
           </GridItem>
         </Grid>
         <Divider borderColor="gray.300" />
-        <Box py={8} textAlign="left">
-          <Text fontSize="md">© 2021 Ocha. All rights reserved</Text>
+        <Box py={{ base: 4, xl: 8 }} textAlign="left">
+          <Text>© 2021 Ocha. All rights reserved</Text>
         </Box>
       </Container>
     </Box>

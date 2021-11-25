@@ -23,8 +23,8 @@ const Layout: FC<ILayout> = ({
 }) => {
   const router = useRouter()
 
-  const main_site_url = 'https://www.herocare.com'
-  const main_site_title = 'Hero Care'
+  const main_site_url = 'https://www.ochaclean.com'
+  const main_site_title = 'Ocha Clean'
 
   let name: string | undefined = router.pathname
     .replace(/\//g, '')

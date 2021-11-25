@@ -1,10 +1,12 @@
-import '../styles/globals.css'
-import '../public/fonts/fonts.css'
+import { useState, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
+
+import '../styles/globals.css'
+import '../public/fonts/fonts.css'
 
 import Footer from '@components/Footer'
 import DesktopNavbar from '@components/Navbar/Desktop'
@@ -20,6 +22,33 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const showNav = !noNavPages.includes(router.pathname)
   const showFooter = !noFooterPages.includes(router.pathname)
+
+  const links = [
+    { name: 'About us', path: '/about-us' },
+    { name: 'FAQ', path: '/faq ' },
+    { name: 'Support', path: '/support' },
+    {
+      name: 'Signup/Login',
+      path: `${process.env.NEXT_APP_APP_URL || ''}/auth`,
+      weight: 'bold'
+    }
+  ]
+
+  const [bgColor, setBgColor] = useState('transparent')
+
+  // navbar scroll changeBackground function
+  const changeBackground = () => {
+    if (window.scrollY >= 66) {
+      setBgColor('white')
+    } else {
+      setBgColor('transparent')
+    }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    window.addEventListener('scroll', changeBackground)
+  })
 
   return (
     <ChakraProvider theme={theme} resetCSS>
@@ -41,8 +70,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Box bgColor="white" pos="relative" overflow="hidden">
             {showNav && (
               <>
-                <DesktopNavbar />
-                {/* <MobileNavbar /> */}
+                <DesktopNavbar links={links} bgColor={bgColor} />
+                <MobileNavbar links={links} bgColor={bgColor} />
               </>
             )}
 

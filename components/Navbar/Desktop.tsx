@@ -1,16 +1,14 @@
 import { FC, Fragment } from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { Box, Container, Flex, Button, Link, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Button, Link, Heading } from '@chakra-ui/react'
 
-const links = [
-  { name: 'About us', path: '/about-us' },
-  { name: 'FAQ', path: '/faq ' },
-  { name: 'Support', path: '/support' },
-  { name: 'Signup/Login', path: '/auth', weight: 'bold' }
-]
+interface IProps {
+  bgColor: string
+  links: { name: string; path: string; weight?: string }[]
+}
 
-const Nav: FC = () => {
+const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
   const router = useRouter()
 
   return (
@@ -20,8 +18,10 @@ const Nav: FC = () => {
       as="nav"
       w="full"
       zIndex={10}
+      pos="fixed"
       align="center"
-      pos="absolute"
+      bgColor={bgColor}
+      d={{ base: 'none', xl: 'flex' }}
     >
       <Container
         d="flex"
@@ -30,15 +30,14 @@ const Nav: FC = () => {
       >
         <NextLink href="/" passHref>
           <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
-            <Text
-              fontWeight="black"
+            <Heading
               fontSize={24}
               letterSpacing={2}
-              color="white"
-              textTransform={'uppercase'}
+              textTransform="uppercase"
+              color={bgColor == 'white' ? 'gray.900' : 'white'}
             >
               Ocha
-            </Text>
+            </Heading>
           </Link>
         </NextLink>
 
@@ -53,10 +52,9 @@ const Nav: FC = () => {
                     _hover={{ hover: 'none' }}
                     _focus={{ outline: 'none' }}
                     rel="noreferrer"
-                    color="white"
+                    color={bgColor == 'white' ? 'gray.900' : 'white'}
                     {...(router.pathname === item.path
                       ? {
-                          color: 'brand.purple.200',
                           fontWeight: 700
                         }
                       : '')}
@@ -67,35 +65,39 @@ const Nav: FC = () => {
                 {links.length !== idx + 1 && <Box mx={4} />}
               </Fragment>
             ))}
-            <Link
-              href="/sign-up"
-              _hover={{ hover: 'none' }}
-              _focus={{ outline: 'none' }}
-              rel="noreferrer"
+            <NextLink
+              href={`${process.env.NEXT_APP_APP_URL || ''}/register`}
+              passHref
             >
-              <Button
-                ml={4}
-                bg="#000"
-                py={6}
-                px={6}
-                color="white"
-                rounded="sm"
-                variant="solid"
-                fontWeight={300}
-                borderWidth={1}
-                borderColor={'#000'}
-                _focus={{ outline: 'none', bg: '#000009' }}
-                _hover={{
-                  borderWidth: 1,
-                  borderColor: '#000',
-                  bg: 'transparent',
-                  color: 'black'
-                }}
-                fontSize={{ base: 'sm', xl: 'sm' }}
+              <Link
+                _hover={{ hover: 'none' }}
+                _focus={{ outline: 'none' }}
+                rel="noreferrer"
               >
-                Register as a cleaner
-              </Button>
-            </Link>
+                <Button
+                  ml={4}
+                  bg="#000"
+                  py={6}
+                  px={6}
+                  color="white"
+                  rounded="sm"
+                  variant="solid"
+                  fontWeight={300}
+                  borderWidth={1}
+                  borderColor={'#000'}
+                  _focus={{ outline: 'none', bg: '#000009' }}
+                  _hover={{
+                    borderWidth: 1,
+                    borderColor: '#000',
+                    bg: 'transparent',
+                    color: 'black'
+                  }}
+                  fontSize={{ base: 'sm', xl: 'sm' }}
+                >
+                  Register as a cleaner
+                </Button>
+              </Link>
+            </NextLink>
           </Flex>
         </Box>
       </Container>
@@ -103,4 +105,4 @@ const Nav: FC = () => {
   )
 }
 
-export default Nav
+export default DesktopNavbar

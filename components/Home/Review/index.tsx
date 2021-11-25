@@ -54,14 +54,11 @@ const Reviews: FC = () => {
             </Flex>
           </Flex>
         </Box>
-        <Box as={GridItem}>
-          <Flex>
-            <ReviewBox {...{ mr: 4 }} />
-            <ReviewBox {...{ mr: 4 }} />
-            <ReviewBox {...{ mr: 4 }} />
-            <ReviewBox {...{ mr: 4 }} />
-          </Flex>
-        </Box>
+        <Flex as={GridItem}>
+          {[1, 2, 3, 4].map(e => (
+            <ReviewBox key={e} {...{ mr: 4 }} />
+          ))}
+        </Flex>
       </Flex>
       <Flex justify="center">
         <Box mb={12}>

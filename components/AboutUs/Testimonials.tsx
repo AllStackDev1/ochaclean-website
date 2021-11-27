@@ -29,7 +29,7 @@ const Testimonials: FC = () => {
           <Text
             fontSize={{ xl: '26px' }}
             lineHeight="43px"
-            lineSpacing="0.0115em"
+            linespacing="0.0115em"
           >
             “We’ve had bad experiences with call centers. Through clean, I hired
             my own remote team that I have complete control over. I started with

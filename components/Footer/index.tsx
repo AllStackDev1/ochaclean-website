@@ -151,6 +151,7 @@ const Footer: FC = () => {
             >
               {socials.map(e => (
                 <Link
+                  key={e.link}
                   href={e.link}
                   _focus={{ outline: 'none' }}
                   _hover={{ outline: 'none' }}

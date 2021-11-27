@@ -66,7 +66,7 @@ const Services: FC = () => {
               </Text>
               <Grid templateColumns={{ xl: 'repeat(2, 1fr)' }} mt={12}>
                 {service.map(item => (
-                  <Flex as={GridItem} align="center" mb={6}>
+                  <Flex as={GridItem} align="center" mb={6} key={item}>
                     <Flex
                       w={5}
                       h={5}
@@ -91,7 +91,7 @@ const Services: FC = () => {
               </Text>
               <Grid templateColumns={{ xl: 'repeat(2, 1fr)' }} mt={12}>
                 {service.map(item => (
-                  <Flex as={GridItem} align="center" mb={6}>
+                  <Flex key={item} as={GridItem} align="center" mb={6}>
                     <Flex
                       w={5}
                       h={5}

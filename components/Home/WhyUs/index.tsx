@@ -72,7 +72,15 @@ const WhyUs = () => {
           </Text>
         </Box>
         {whys.map(item => (
-          <Box as={GridItem} p={12} gap={6} h={64} bg={'#fff'}>
+          <Box
+            key={item.title}
+            x
+            as={GridItem}
+            p={12}
+            gap={6}
+            h={64}
+            bg={'#fff'}
+          >
             <Icon as={item.icon} boxSize={10} />
             <Text fontWeight={'bold'} mt={10} fontSize={20}>
               {item.title}

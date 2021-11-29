@@ -39,7 +39,7 @@ const WhyUs = () => {
         pos="absolute"
         w={{ base: '100%', xl: '60%' }}
         bg="#000"
-        left={{ base: 0, xl: -20 }}
+        right={{ base: 0, xl: -20 }}
         minH={'full'}
         top={0}
         transform={{ base: 'skew(0deg, 0)', xl: 'skew(9deg, 0)' }}

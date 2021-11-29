@@ -14,17 +14,18 @@ const HeroWrapperOne: FC<{ title: string }> = ({ title }) => {
       pos="relative"
     >
       <Box pos="absolute" left={24} top={24}>
-        <Image src="./images/Group 8119.png" boxSize={48} />
+        <Image src="./images/Group 8119.png" boxSize={{ base: 24, xl: 48 }} />
       </Box>
       <Box pos="absolute" right={24} bottom={10}>
-        <Image src="./images/Group 8119.png" boxSize={48} />
+        <Image src="./images/Group 8119.png" boxSize={{ base: 24, xl: 48 }} />
       </Box>
       <Flex mt={28} flexDir="column" justify="center">
         <Heading
           color="white"
-          fontSize={{ '2xl': '62px' }}
+          fontSize={{ base: 32, '2xl': '62px' }}
           lineHeight={{ '2xl': '1.5em' }}
           fontWeight={400}
+          px={{ base: 8, xl: 0 }}
         >
           {title}
         </Heading>

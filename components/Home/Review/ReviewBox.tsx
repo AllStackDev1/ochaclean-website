@@ -9,7 +9,14 @@ interface IReviewBox {
 }
 const ReviewBox: FC<IReviewBox> = ({ ...rest }) => {
   return (
-    <Box w={96} minH={48} borderWidth={2} rounded={'md'} p={8} {...rest}>
+    <Box
+      w={96}
+      minH={48}
+      borderWidth={2}
+      rounded={'md'}
+      p={{ base: 6, xl: 8 }}
+      {...rest}
+    >
       <Flex mb={8}>
         <Image
           src={'./images/avatar.png'}

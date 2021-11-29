@@ -1,59 +1,19 @@
 import { FC } from 'react'
-import {
-  Box,
-  Icon,
-  Flex,
-  Grid,
-  Text,
-  GridItem,
-  Image,
-  Link
-} from '@chakra-ui/react'
-import { Arrow } from 'theme/Icons'
+import { Box, Flex, Grid, Text, GridItem, Image, Link } from '@chakra-ui/react'
 import ReviewBox from './ReviewBox'
+import ArrowButton from './ArrowButton'
 
 const Reviews: FC = () => {
   return (
     <Box mt={24}>
+      <ArrowButton d={{ base: 'flex', xl: 'none' }} />
       <Flex
         as={Grid}
         templateColumns={{ xl: 'repeat(6, 1fr)' }}
         mb={12}
         align="center"
       >
-        <Box as={GridItem}>
-          <Flex
-            direction={'column'}
-            justifyContent={'space-around'}
-            minH={48}
-            ml={20}
-            mr={16}
-          >
-            <Flex
-              h={12}
-              w={12}
-              rounded={'full'}
-              cursor="pointer"
-              bg="gray.050"
-              align="center"
-              justify="center"
-            >
-              <Icon as={Arrow} />
-            </Flex>
-
-            <Flex
-              h={12}
-              w={12}
-              rounded={'full'}
-              cursor="pointer"
-              bg="gray.050"
-              align="center"
-              justify="center"
-            >
-              <Icon as={Arrow} transform={'rotate(180deg)'} />
-            </Flex>
-          </Flex>
-        </Box>
+        <ArrowButton d={{ base: 'none', xl: 'flex' }} />
         <Flex as={GridItem}>
           {[1, 2, 3, 4].map(e => (
             <ReviewBox key={e} {...{ mr: 4 }} />

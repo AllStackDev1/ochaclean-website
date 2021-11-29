@@ -25,7 +25,7 @@ const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
   return (
     <Flex
       h={24}
-      px={2}
+      px={{ base: 8, xl: 2 }}
       as="nav"
       w="full"
       shadow="sm"

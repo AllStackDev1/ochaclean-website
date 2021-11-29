@@ -1,13 +1,5 @@
 import { FC } from 'react'
-import {
-  Box,
-  Icon,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Text
-} from '@chakra-ui/react'
+import { Box, Icon, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
 import { Reload, User, Speed, Wallet } from 'theme/Icons'
 
 const whys = [
@@ -45,12 +37,12 @@ const WhyUs = () => {
     <Box pos={'relative'} minH={96} overflow="hidden">
       <Box
         pos="absolute"
-        w={'60%'}
+        w={{ base: '100%', xl: '60%' }}
         bg="#000"
-        right={-20}
+        left={{ base: 0, xl: -20 }}
         minH={'full'}
         top={0}
-        transform={'skew(9deg, 0)'}
+        transform={{ base: 'skew(0deg, 0)', xl: 'skew(9deg, 0)' }}
       ></Box>
       <Grid
         gap={12}
@@ -63,7 +55,7 @@ const WhyUs = () => {
         h={'full'}
         templateColumns={{ xl: 'repeat(3, 1fr)' }}
       >
-        <Box as={GridItem} p={12} h={48} bg={'#fff'}>
+        <Box as={GridItem} p={12} h={{ base: 72, xl: 48 }} bg={'#fff'}>
           <Heading as={'h4'} fontSize={48}>
             Why Us?
           </Heading>
@@ -78,8 +70,9 @@ const WhyUs = () => {
             as={GridItem}
             p={12}
             gap={6}
-            h={64}
+            h={{ base: 72, xl: 64 }}
             bg={'#fff'}
+            shadow={{ base: 'md', xl: 'none' }}
           >
             <Icon as={item.icon} boxSize={10} />
             <Text fontWeight={'bold'} mt={10} fontSize={20}>

@@ -29,7 +29,7 @@ const Services: FC = () => {
   ]
   return (
     <Box pos="relative" mt={12} minH={120}>
-      <Box pos="absolute">
+      <Box pos="absolute" d={{ base: 'none', xl: 'block' }}>
         <Image src="./images/abstract.png" boxSize={48} />
       </Box>
       <Heading as="h3" textAlign="center" fontWeight={500}>

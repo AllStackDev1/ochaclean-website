@@ -55,7 +55,13 @@ const WhyUs = () => {
         h={'full'}
         templateColumns={{ xl: 'repeat(3, 1fr)' }}
       >
-        <Box as={GridItem} p={12} h={{ base: 72, xl: 48 }} bg={'#fff'}>
+        <Box
+          as={GridItem}
+          p={12}
+          h={{ base: 72, xl: 'full' }}
+          bg={'#fff'}
+          shadow="md"
+        >
           <Heading as={'h4'} fontSize={48}>
             Why Us?
           </Heading>
@@ -72,7 +78,7 @@ const WhyUs = () => {
             gap={6}
             h={{ base: 72, xl: 64 }}
             bg={'#fff'}
-            shadow={{ base: 'md', xl: 'none' }}
+            shadow={{ base: 'md' }}
           >
             <Icon as={item.icon} boxSize={10} />
             <Text fontWeight={'bold'} mt={10} fontSize={20}>

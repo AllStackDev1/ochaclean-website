@@ -3,12 +3,17 @@ import { Box, Text, Heading, Container } from '@chakra-ui/react'
 
 const OurMission: FC = () => {
   return (
-    <Box w="full" py={{ xl: 40 }} bgColor="#F8F3F3">
+    <Box
+      w="full"
+      py={{ base: 24, xl: 40 }}
+      bgColor="#F8F3F3"
+      pb={{ base: 60, xl: 0 }}
+    >
       <Container w="full" minW={{ lg: '6xl', '4xl': '8xl' }}>
         <Box w="full">
           <Heading
             fontWeight={400}
-            fontSize={{ xl: '43px' }}
+            fontSize={{ base: 32, xl: '43px' }}
             lineHeight={{ xl: '1.5em' }}
             textDecoration="underline"
             textUnderlineOffset="10px"

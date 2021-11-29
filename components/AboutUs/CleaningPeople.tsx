@@ -11,8 +11,12 @@ import {
 
 const CleaningPeople: FC = () => {
   return (
-    <Flex pl={{ xl: 32 }} pr={{ xl: 24 }} py={{ xl: 20 }}>
-      <Grid templateColumns={{ xl: '50% 50%' }}>
+    <Flex
+      pl={{ base: 8, xl: 32 }}
+      pr={{ base: 8, xl: 24 }}
+      py={{ base: 8, xl: 20 }}
+    >
+      <Grid templateColumns={{ base: '100%', xl: '50% 50%' }}>
         <GridItem>
           <Box w={{ xl: 110 }}>
             <Flex mb={4} align="center" justify="space-between" w={44}>
@@ -21,7 +25,7 @@ const CleaningPeople: FC = () => {
             </Flex>
             <Heading
               fontWeight={400}
-              fontSize={{ xl: '40px' }}
+              fontSize={{ base: 24, xl: '40px' }}
               lineHeight={{ xl: '56px' }}
             >
               Unleash innovation with connected payments lorerm ispum.

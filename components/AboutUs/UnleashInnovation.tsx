@@ -16,8 +16,8 @@ const UnleashInnovation: FC = () => {
       h={132}
       bgSize="cover"
       color="white"
-      px={{ xl: 28 }}
-      py={{ xl: 20 }}
+      px={{ base: 8, xl: 28 }}
+      py={{ base: 8, xl: 20 }}
       bgImage="./images/unleash-bg.png"
     >
       <Grid templateColumns={{ xl: '50% 50%' }}>
@@ -34,7 +34,7 @@ const UnleashInnovation: FC = () => {
             </Flex>
             <Heading
               fontWeight={400}
-              fontSize={{ xl: '40px' }}
+              fontSize={{ base: 24, xl: '40px' }}
               lineHeight={{ xl: '56px' }}
             >
               Unleash innovation with connected payments lorerm ispum..

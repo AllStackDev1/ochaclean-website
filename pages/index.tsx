@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Layout from '@components/Layout'
-import Hero from '@components/Home/Hero'
+import Hero from '@components/Home/Hero/Index'
 import Review from '@components/Home/Review'
 import Services from '@components/Home/Services'
 import HowItWorks from '@components/Home/HowItWorks'

@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import { FiSearch } from 'react-icons/fi'
 
-const Hero: FC = () => {
+const HeroDesktop: FC = () => {
   return (
     <Flex
       w="full"
@@ -116,4 +116,4 @@ const Hero: FC = () => {
   )
 }
 
-export default Hero
+export default HeroDesktop

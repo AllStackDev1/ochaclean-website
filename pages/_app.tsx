@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const links = [
     { name: 'About us', path: '/about-us' },
     { name: 'FAQ', path: '/faq ' },
-    { name: 'Support', path: '/support' },
+    { name: 'Contact Us', path: '/contact-us' },
     {
       name: 'Signup/Login',
       path: `${process.env.NEXT_APP_APP_URL || ''}/auth`,

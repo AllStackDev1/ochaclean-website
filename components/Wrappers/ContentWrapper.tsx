@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 const ContentWrapper: FC = ({ children }) => {
   return (
-    <Box pos="relative" p={12} bg={'gray.50'}>
+    <Box pos="relative" p={{ base: 6, xl: 12 }} bg={'gray.50'}>
       <Box pos="absolute" right={0} top={0} w={56}>
         <Image src="./images/Rectangle 3843.png" />
       </Box>

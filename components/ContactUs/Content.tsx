@@ -17,14 +17,14 @@ const Content: FC = () => {
         </Flex>
       </ContentWrapper>
       <Box p={16} bg="rgba(233, 233, 233, 1)">
-        <Container minW="4xl">
+        <Container minW={{ xl: '4xl' }}>
           <Box>
             <Text fontSize={36} mb={1}>
               We have all the answers
             </Text>
             <Box w={48} h={'2px'} bg="black" mb={6}></Box>
           </Box>
-          <Text>
+          <Text w={'100%'}>
             Our Support Team is here for you. Give us a call or shoot us an
             email during business hours for immediate support. You can also
             reach out to us after hours and we will get back to you as quickly

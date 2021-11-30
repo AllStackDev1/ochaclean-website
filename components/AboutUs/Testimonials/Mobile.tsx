@@ -4,19 +4,18 @@ import { ArrowCircle } from 'theme/Icons'
 
 const Testimonials: FC = () => {
   return (
-    <Flex
-      h={{ base: 'auto', xl: 125 }}
-      pos="relative"
-      w="full"
-      bgColor="#F9FAFB"
-    >
-      <Flex pl={{ xl: 16 }} justify="center" flexDir="column" w="50%" h="full">
+    <Box h={{ xl: 125 }} w="full" bgColor="#F9FAFB">
+      <Flex
+        px={{ base: 4 }}
+        justifyContent="space-between"
+        flexDir="row"
+        h="full"
+      >
         <Box>
-          <Icon as={ArrowCircle} boxSize={20} />
+          <Icon as={ArrowCircle} boxSize={20} transform="rotate(270deg)" />
         </Box>
-        <Box my={4} />
         <Box>
-          <Icon as={ArrowCircle} boxSize={20} transform="scaleY(-1)" />
+          <Icon as={ArrowCircle} boxSize={20} transform="rotate(90deg)" />
         </Box>
       </Flex>
       <Box w="50%" h="full" bgColor="white"></Box>
@@ -25,9 +24,8 @@ const Testimonials: FC = () => {
         bottom={0}
         w={{ xl: '85%' }}
         bgColor="white"
-        pos="absolute"
-        py={{ base: 16, xl: 28 }}
-        px={{ base: 16, xl: 56 }}
+        py={{ xl: 28 }}
+        px={{ base: 6 }}
         flexDir="column"
       >
         <Box>
@@ -41,11 +39,7 @@ const Testimonials: FC = () => {
             one rep to see how it worked and am continuing to grow my team.”
           </Text>
         </Box>
-        <Flex mt={5} align="center" fontSize="md">
-          <Text fontWeight={700}>Nathalie Grossman</Text>
-          <Text ml={4}>Sales Manager at National Cellular</Text>
-        </Flex>
-        <Box mt={8}>
+        <Flex mt={8} pb={6}>
           <Box
             borderWidth={3}
             borderColor="gray.700"
@@ -53,9 +47,15 @@ const Testimonials: FC = () => {
             w={28}
             h={28}
           />
-        </Box>
+          <Box ml={12}>
+            <Text fontWeight={700} mt={4}>
+              Nathalie Grossman
+            </Text>
+            <Text fontSize={14}>Sales Manager at National Cellular</Text>
+          </Box>
+        </Flex>
       </Flex>
-    </Flex>
+    </Box>
   )
 }
 

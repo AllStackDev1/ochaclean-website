@@ -22,7 +22,7 @@ const HeroWrapperOne: FC<{ title: string }> = ({ title }) => {
       <Flex mt={28} flexDir="column" justify="center">
         <Heading
           color="white"
-          fontSize={{ base: 32, '2xl': '62px' }}
+          fontSize={{ base: 40, '2xl': '62px' }}
           lineHeight={{ '2xl': '1.5em' }}
           fontWeight={400}
           px={{ base: 8, xl: 0 }}

@@ -5,9 +5,9 @@ const OurMission: FC = () => {
   return (
     <Box
       w="full"
-      py={{ base: 24, xl: 40 }}
+      h={{ base: 'auto' }}
+      py={{ base: 12, xl: 40 }}
       bgColor="#F8F3F3"
-      pb={{ base: 60, xl: 0 }}
     >
       <Container w="full" minW={{ lg: '6xl', '4xl': '8xl' }}>
         <Box w="full">

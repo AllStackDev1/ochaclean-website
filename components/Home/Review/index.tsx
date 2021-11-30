@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Box, Flex, Grid, Text, GridItem, Image, Link } from '@chakra-ui/react'
 import ReviewBox from './ReviewBox'
-import ArrowButton from './ArrowButton'
+import ArrowButton from '../../Buttons/ArrowButton'
 
 const Reviews: FC = () => {
   return (

@@ -26,16 +26,16 @@ const Hero: FC = () => {
           w="full"
           justifyContent="space-around"
           align={'center'}
-          mt={20}
+          mt={{ base: 40, xl: 20 }}
         >
           <Box color="white" colSpan={3}>
-            <Text fontSize={64}>Frequently Ask Question’s</Text>
+            <Text fontSize={{ sm: 36, md: 40 }}>Frequently Ask Question’s</Text>
             <Text fontSize={20}>
               Haven’t found what you’re looking for? or{' '}
               <Link color="orangered">Contact us</Link>
             </Text>
           </Box>
-          <Box colSpan={2}>
+          <Box colSpan={2} d={{ base: 'none', xl: 'block' }}>
             <Image src={'./images/toy.png'} boxSize={80} />
           </Box>
         </Flex>

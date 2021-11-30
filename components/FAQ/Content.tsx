@@ -43,9 +43,9 @@ const Content: FC = () => {
 
   const FaqItem: FC<IFaqItem> = ({ onToggle, active }) => (
     <Box
-      px={12}
+      px={{ base: 6, xl: 12 }}
       py={6}
-      w={'4xl'}
+      w={{ base: '100%', xl: '4xl' }}
       borderBottomWidth={1}
       borderColor="gray.200"
       bg={'white'}
@@ -73,7 +73,7 @@ const Content: FC = () => {
 
   return (
     <ContentWrapper>
-      <Box w={'3xl'} mx={'auto'}>
+      <Box w={{ base: '100%', xl: '3xl' }} mx={'auto'}>
         {Faqs.map((item, index) => (
           <FaqItem
             onToggle={() => handleToggle(index)}

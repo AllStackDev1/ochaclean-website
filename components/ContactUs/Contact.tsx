@@ -8,8 +8,8 @@ const Contact = () => {
         Contact us
       </Heading>
       <Box w={48} h={'2px'} bg="black" mb={6}></Box>
-      <Grid templateColumns="repeat(2, 1fr)">
-        <Box as={GridItem}>
+      <Grid templateColumns={{ xl: 'repeat(2, 1fr)' }}>
+        <Box as={GridItem} mb={12}>
           <Icon as={Envelope} boxSize={10} mb={4} />
           <Text fontWeight={500} fontSize={20} mb={2}>
             Contact Info
@@ -24,7 +24,7 @@ const Contact = () => {
             155 E 26th St, 5B Ethosa Lekki Phase II
           </Text>
         </Box>
-        <Box as={GridItem}>
+        <Box as={GridItem} mb={12}>
           <Icon as={Home} boxSize={10} mb={4} />
           <Text fontWeight={500} fontSize={20} mb={2}>
             Business hours are in WAT

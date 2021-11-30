@@ -3,18 +3,20 @@
 import { FC } from 'react'
 import { Box, Icon, Flex, Image, Text, Heading } from '@chakra-ui/react'
 import { IoStar } from 'react-icons/io5'
-
+import { IReviewList } from './index'
 interface IReviewBox {
+  data: IReviewList
   [rest: string]: any
 }
-const ReviewBox: FC<IReviewBox> = ({ ...rest }) => {
+const ReviewBox: FC<IReviewBox> = ({ data, ...rest }) => {
   return (
     <Box
-      w={96}
+      minW={{ base: 72, sm: 80, xl: 96 }}
       minH={48}
       borderWidth={2}
       rounded={'md'}
       p={{ base: 6, xl: 8 }}
+      ml={2}
       {...rest}
     >
       <Flex mb={8}>
@@ -26,18 +28,19 @@ const ReviewBox: FC<IReviewBox> = ({ ...rest }) => {
         />
         <Box mt={2} ml={2}>
           <Heading fontSize={16} fontWeight="bold">
-            Brain Lim
+            {data.user.name}
           </Heading>
-          <Text mt={1} color={'gray.400'} fontWeight={500}>
-            CEO AT EMAZING GROUP
+          <Text
+            mt={1}
+            color={'gray.400'}
+            fontWeight={500}
+            textTransform="uppercase"
+          >
+            {data.user.title}
           </Text>
         </Box>
       </Flex>
-      <Text fontWeight={500}>
-        I’ve used before tidy choice which it was great, until a cleaner
-        cancelled on me and they said couldn’t find anyone with my requirements
-        which are a simple standard cleaning!
-      </Text>
+      <Text fontWeight={500}>{data.desc}</Text>
       <Flex mt={4}>
         {['a', 'b', 'c', 'd', 'e'].map((item, i) => (
           <Icon
@@ -46,7 +49,7 @@ const ReviewBox: FC<IReviewBox> = ({ ...rest }) => {
             mr={1}
             boxSize={5}
             color={
-              item === 'b' ? 'rgba(196, 196, 196, 1)' : ' rgba(81, 178, 126, 1)'
+              item === 'e' ? 'rgba(196, 196, 196, 1)' : ' rgba(81, 178, 126, 1)'
             }
           />
         ))}

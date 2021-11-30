@@ -4,7 +4,12 @@ import { ArrowCircle } from 'theme/Icons'
 
 const Testimonials: FC = () => {
   return (
-    <Box h={{ xl: 125 }} w="full" bgColor="#F9FAFB">
+    <Box
+      h={{ xl: 125 }}
+      w="full"
+      bgColor="#F9FAFB"
+      d={{ base: 'flex', xl: 'none' }}
+    >
       <Flex
         px={{ base: 4 }}
         justifyContent="space-between"

@@ -6,7 +6,6 @@ const Testimonials: FC = () => {
   return (
     <>
       <Desktop />
-      <Mobile />
     </>
   )
 }

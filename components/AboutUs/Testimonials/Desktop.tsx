@@ -14,12 +14,6 @@ const TestimonialList = [
     title: 'Sales Manager at National Cellular',
     description:
       '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
-  },
-  {
-    user: 'Eric Abbey',
-    title: 'Developer at National Cellular',
-    description:
-      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
   }
 ]
 

@@ -115,7 +115,7 @@ const Testimonials: FC = () => {
           </Flex>
         </Box>
         <Box as={GridItem} colSpan={5}>
-          <Flex flexDir="column">
+          <Flex flexDir="column" mt={40}>
             {TestimonialList.map(item => (
               <TestimonialItem data={item} />
             ))}

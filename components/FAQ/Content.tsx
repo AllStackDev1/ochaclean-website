@@ -1,4 +1,4 @@
-import { Box, Icon, Image } from '@chakra-ui/react'
+import { Box, Icon } from '@chakra-ui/react'
 import { FC, useState } from 'react'
 import { HiOutlinePlus, HiOutlineMinusSm } from 'react-icons/hi'
 import ContentWrapper from '@components/Wrappers/ContentWrapper'

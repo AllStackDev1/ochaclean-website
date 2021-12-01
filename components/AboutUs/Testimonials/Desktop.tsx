@@ -14,18 +14,34 @@ const TestimonialList = [
     title: 'Sales Manager at National Cellular',
     description:
       '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
+  },
+  {
+    user: 'Eric Abbey',
+    title: 'Fullstack Developer',
+    description:
+      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
+  },
+  {
+    user: 'Kojo Q',
+    title: 'Accountant',
+    description:
+      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
   }
 ]
 
-const TestimonialItem: FC<{ data: ITestimonialList }> = ({ data }) => (
+const TestimonialItem: FC<{
+  data: ITestimonialList
+  itemIndex: number
+  active: number
+}> = ({ data, itemIndex, active }) => (
   <Flex
     right={0}
     bottom={0}
     w={{ xl: '100%' }}
     bgColor="white"
-    py={{ xl: 28 }}
     px={{ base: 8, xl: 56 }}
     flexDir="column"
+    d={itemIndex === active ? 'flex' : 'none'}
   >
     <Box>
       <Text fontSize={{ xl: '26px' }} lineHeight="43px" linespacing="0.0115em">
@@ -41,16 +57,25 @@ const TestimonialItem: FC<{ data: ITestimonialList }> = ({ data }) => (
       <Text fontWeight={700}>{data.user}</Text>
       <Text ml={{ xl: 4 }}>{data.title}</Text>
     </Flex>
-    <Box mt={8}>
-      <Box
-        borderWidth={3}
-        borderColor="gray.700"
-        rounded="full"
-        w={28}
-        h={28}
-      />
-    </Box>
   </Flex>
+)
+
+const TestimonialImage: FC<{
+  data: ITestimonialList
+  itemIndex: number
+  active: number
+}> = ({ itemIndex, active }) => (
+  <Box
+    rounded="full"
+    w={28}
+    h={28}
+    borderWidth={itemIndex === active ? 3 : 0}
+    borderColor="black"
+    p={1}
+    mr={4}
+  >
+    <Box bg="gray.300" w="100%" h="100%" rounded="full"></Box>
+  </Box>
 )
 
 const Testimonials: FC = () => {
@@ -81,12 +106,17 @@ const Testimonials: FC = () => {
           flexDir="row"
           h="full"
         >
-          <Box>
-            <Icon as={ArrowCircle} boxSize={20} transform="rotate(270deg)" />
-          </Box>
-          <Box>
-            <Icon as={ArrowCircle} boxSize={20} transform="rotate(90deg)" />
-          </Box>
+          {currentSlide > 0 && (
+            <Box onClick={() => handleClick(-1)}>
+              <Icon as={ArrowCircle} boxSize={20} transform="rotate(270deg)" />
+            </Box>
+          )}
+
+          {TestimonialList.length - 1 > currentSlide && (
+            <Box onClick={() => handleClick(1)}>
+              <Icon as={ArrowCircle} boxSize={20} transform="rotate(90deg)" />
+            </Box>
+          )}
         </Flex>
       </Box>
       <Flex
@@ -96,7 +126,7 @@ const Testimonials: FC = () => {
         pos="relative"
         align="center"
       >
-        <Box as={GridItem} colSpan={1}>
+        <Box as={GridItem} colSpan={2}>
           <Flex
             pl={{ xl: 16 }}
             justify="center"
@@ -104,22 +134,48 @@ const Testimonials: FC = () => {
             w="50%"
             h="full"
             d={{ base: 'none', xl: 'block' }}
+            mr={12}
+            mt={52}
           >
-            <Box onClick={() => handleClick(-1)}>
-              <Icon as={ArrowCircle} boxSize={20} />
-            </Box>
+            {currentSlide > 0 ? (
+              <Box mb={12} onClick={() => handleClick(-1)}>
+                <Icon as={ArrowCircle} boxSize={20} />
+              </Box>
+            ) : (
+              <Box></Box>
+            )}
+
             <Box my={4} />
-            <Box onClick={() => handleClick(1)}>
-              <Icon as={ArrowCircle} boxSize={20} transform="scaleY(-1)" />
-            </Box>
+            {TestimonialList.length - 1 > currentSlide ? (
+              <Box onClick={() => handleClick(1)}>
+                <Icon as={ArrowCircle} boxSize={20} transform="scaleY(-1)" />
+              </Box>
+            ) : (
+              <Box></Box>
+            )}
           </Flex>
         </Box>
-        <Box as={GridItem} colSpan={5}>
-          <Flex flexDir="column" mt={40}>
-            {TestimonialList.map(item => (
-              <TestimonialItem data={item} />
-            ))}
-          </Flex>
+        <Box as={GridItem} colSpan={4}>
+          <Box mt={{ xl: 52 }} pt={{ xl: 24 }} pb={24} bg="white">
+            <Flex flexDir="column">
+              {TestimonialList.map((item, i) => (
+                <TestimonialItem
+                  data={item}
+                  itemIndex={i}
+                  active={currentSlide}
+                />
+              ))}
+            </Flex>
+            <Flex px={{ base: 8, xl: 56 }} mt={8}>
+              {TestimonialList.map((item, i) => (
+                <TestimonialImage
+                  data={item}
+                  itemIndex={i}
+                  active={currentSlide}
+                />
+              ))}
+            </Flex>
+          </Box>
         </Box>
       </Flex>
     </Box>

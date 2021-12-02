@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import { Flex, Box, Text, Container } from '@chakra-ui/react'
-import { FC, useState } from 'react'
 import ContentWrapper from '@components/Wrappers/ContentWrapper'
+
 const Content: FC = () => {
   return (
     <Box>

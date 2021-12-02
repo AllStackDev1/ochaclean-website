@@ -1,14 +1,5 @@
 import { FC } from 'react'
-import {
-  Container,
-  Flex,
-  Box,
-  Image,
-  Text,
-  Link,
-  Grid,
-  GridItem
-} from '@chakra-ui/react'
+import { Container, Flex, Box, Image, Text, Link } from '@chakra-ui/react'
 
 const Hero: FC = () => {
   return (

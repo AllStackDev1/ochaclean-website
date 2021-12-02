@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { Box, Grid, Flex, Text, Button, Container } from '@chakra-ui/react'
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 const MobileHowItWorks: FC = () => {
   return (

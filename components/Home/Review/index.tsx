@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import React from 'react'
-import { Box, Flex, Grid, Text, GridItem, Image, Link } from '@chakra-ui/react'
+import { Box, Flex, Text, GridItem, Image, Link } from '@chakra-ui/react'
 import ReviewBox from './ReviewBox'
 import { motion } from 'framer-motion'
 import ArrowButton from '../../Buttons/ArrowButton'
@@ -16,6 +16,7 @@ export interface IReviewList {
   }
   desc: string
 }
+
 const reviewList: IReviewList[] = [
   {
     user: {
@@ -53,6 +54,7 @@ const reviewList: IReviewList[] = [
     desc: 'I’ve used before tidy choice which it was great, until a cleaner cancelled on me and they said couldn’t find anyone with my requirements which are a simple standard cleaning!'
   }
 ]
+
 const Reviews: FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState<number>(0)
   const isMobile = useMediaQuery({ query: '(max-width: 680px' })

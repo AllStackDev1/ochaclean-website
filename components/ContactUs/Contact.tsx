@@ -1,7 +1,8 @@
+import { FC } from 'react'
 import { Text, Box, Grid, GridItem, Heading, Icon } from '@chakra-ui/react'
 import { Home, Envelope } from 'theme/Icons'
-import { FC, useState } from 'react'
-const Contact = () => {
+
+const Contact: FC = () => {
   return (
     <Box py={24} px={20}>
       <Heading fontWeight={500} mb={2}>

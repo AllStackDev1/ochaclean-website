@@ -32,7 +32,8 @@ const whys = [
     description: 'At vero eos et accusamus et iusto odio dignissimos ducimus'
   }
 ]
-const WhyUs = () => {
+
+const WhyUs: FC = () => {
   return (
     <Box pos={'relative'} minH={96} overflow="hidden">
       <Box

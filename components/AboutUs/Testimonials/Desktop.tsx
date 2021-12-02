@@ -13,19 +13,19 @@ const TestimonialList = [
     user: 'Nathalie Grossman',
     title: 'Sales Manager at National Cellular',
     description:
-      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
+      '“We’ve had bad experiences with call centers. I started with one rep to see how it worked and am continuing to grow my team.”'
   },
   {
     user: 'Eric Abbey',
     title: 'Fullstack Developer',
     description:
-      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
+      '“Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
   },
   {
     user: 'Kojo Q',
     title: 'Accountant',
     description:
-      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. I started with one rep to see how it worked and am continuing to grow my team.”'
+      '“We’ve had bad experiences with call centers. Through clean, I hired my own remote team that I have complete control over. ”'
   }
 ]
 
@@ -142,7 +142,9 @@ const Testimonials: FC = () => {
                 <Icon as={ArrowCircle} boxSize={20} />
               </Box>
             ) : (
-              <Box></Box>
+              <Box mb={12} color="gray.300">
+                <Icon as={ArrowCircle} boxSize={20} />
+              </Box>
             )}
 
             <Box my={4} />
@@ -151,7 +153,9 @@ const Testimonials: FC = () => {
                 <Icon as={ArrowCircle} boxSize={20} transform="scaleY(-1)" />
               </Box>
             ) : (
-              <Box></Box>
+              <Box color="gray.300">
+                <Icon as={ArrowCircle} boxSize={20} transform="scaleY(-1)" />
+              </Box>
             )}
           </Flex>
         </Box>

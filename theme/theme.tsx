@@ -61,6 +61,10 @@ export const theme = extendTheme({
     brandOrange: {
       500: '#FFAC50',
       600: '#FFAC50'
+    },
+    buttonDarkScheme: {
+      500: '#000000',
+      600: '#000000'
     }
   },
   space: {

@@ -77,7 +77,7 @@ const Reviews: FC = () => {
         length={reviewList ? reviewList.length : 0}
         cols={isTabletOrMobile ? (isMobile ? 1 : 2) : 3}
       />
-      <Flex templateColumns={{ xl: 'repeat(6, 1fr)' }} mb={12} align="center">
+      <Flex mb={12} align="center">
         <Box as={GridItem} colSpan={1}>
           <ArrowButton
             d={{ base: 'none', xl: 'flex' }}

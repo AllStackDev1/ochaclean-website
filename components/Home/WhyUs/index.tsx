@@ -73,7 +73,6 @@ const WhyUs: FC = () => {
         {whys.map(item => (
           <Box
             key={item.title}
-            x
             as={GridItem}
             p={12}
             gap={6}

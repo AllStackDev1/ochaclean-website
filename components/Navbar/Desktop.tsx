@@ -76,22 +76,16 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
               >
                 <Button
                   ml={4}
-                  bg="#000"
                   py={6}
                   px={6}
                   color="white"
                   rounded="sm"
-                  variant="solid"
                   fontWeight={300}
-                  borderWidth={1}
-                  borderColor={'#000'}
+                  borderWidth={0.5}
+                  borderColor={'#fff'}
+                  colorScheme="buttonDarkScheme"
                   _focus={{ outline: 'none', bg: '#000009' }}
-                  _hover={{
-                    borderWidth: 1,
-                    borderColor: '#000',
-                    bg: 'transparent',
-                    color: 'black'
-                  }}
+                  _hover={{ bg: 'transparent', color: 'white' }}
                   fontSize={{ base: 'sm', xl: 'sm' }}
                 >
                   Register as a cleaner

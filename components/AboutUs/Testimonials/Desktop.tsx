@@ -97,7 +97,7 @@ const Testimonials: FC = () => {
         bgColor="white"
         right={0}
         pos="absolute"
-        zindex={4}
+        zIndex={4}
       ></Box>
       <Box d={{ xl: 'none' }}>
         <Flex
@@ -122,7 +122,7 @@ const Testimonials: FC = () => {
       <Flex
         as={Grid}
         templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(6, 1fr)' }}
-        zindex={10}
+        zIndex={10}
         pos="relative"
         align="center"
       >

@@ -89,14 +89,14 @@ const HeroDesktop: FC = () => {
               />
             </InputGroup>
             <Button
-              bg="black"
-              w={{ base: 24, xl: 32 }}
-              rounded="none"
-              color="white"
-              fontSize={{ base: 12, xl: 'md' }}
-              fontWeight={500}
               py={6}
+              color="white"
+              rounded="none"
+              fontWeight={500}
               px={{ base: 8, xl: 16 }}
+              w={{ base: 24, xl: 32 }}
+              colorScheme="buttonDarkScheme"
+              fontSize={{ base: 12, xl: 'md' }}
             >
               Book cleaner
             </Button>

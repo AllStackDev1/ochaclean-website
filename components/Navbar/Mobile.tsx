@@ -88,7 +88,7 @@ const MobileNavbar: FC<IProps> = ({ links, bgColor }) => {
                   ))}
                   <Box pt={2}>
                     <NextLink
-                      href={`${process.env.NEXT_APP_APP_URL || ''}/register`}
+                      href="https://cleaners.ochaclean.com/create-account"
                       passHref
                     >
                       <Link

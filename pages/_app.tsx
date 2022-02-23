@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     { name: 'Contact Us', path: '/contact-us' },
     {
       name: 'Signup/Login',
-      path: `${process.env.NEXT_APP_APP_URL || ''}/auth`,
+      path: 'https://app.ochaclean.com',
       weight: 'bold'
     }
   ]

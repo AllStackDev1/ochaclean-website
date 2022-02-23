@@ -66,7 +66,7 @@ const DesktopNavbar: FC<IProps> = ({ links, bgColor }) => {
               </Fragment>
             ))}
             <NextLink
-              href={`${process.env.NEXT_APP_APP_URL || ''}/register`}
+              href="https://cleaners.ochaclean.com/create-account"
               passHref
             >
               <Link
